@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: true
+    show-sql: true
+  #热部署
+  devtools:
+    #热部署生效
+    remote:
+      restart:
+        enabled: true
+    #设置重启的目录
+    restart:
+      additional-paths: src/main/java
